@@ -1,0 +1,52 @@
+args:
+  q: 100000
+  n: 30000000
+compile:
+  c: -O2 -std=c11
+  cpp: -O2 -std=c++14
+  java: ''
+  pas: -O2
+  py: ''
+data:
+- args:
+    n: 8
+    q: 8
+  cases:
+  - 1
+  score: 20
+- args:
+    n: 200
+    q: 200
+  cases:
+  - 2
+  score: 15
+- args:
+    n: 3000
+    q: 3000
+  cases:
+  - 3
+  score: 15
+- args:
+    n: 500000
+    q: 100000
+  cases:
+  - 4
+  score: 20
+- args:
+    n: 30000000
+    q: 100000
+  cases:
+  - 5
+  score: 30
+folder: problem
+memory limit: 1024 MiB
+name: D
+partial score: false
+pre: []
+samples: []
+time limit: 3.0
+title:
+  zh-cn: D
+type: program
+users: {}
+version: 2

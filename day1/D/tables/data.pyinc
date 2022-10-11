@@ -1,0 +1,14 @@
+ret = [["测试点编号","$n \\le$", "$q \\le$", "分值"]]	#注意右斜杠经常需要两次转义
+for datum in prob['data']:	#引用conf.json/yaml中的变量
+	args = datum['args']
+	row = [
+		','.join(map(str, datum['cases'])),	#Python字符串可以用双引号也可以用单引号
+											#字符串.join(数组)表示把数组的每一项用字符串连接拼成大字符串
+											#map(函数,数组)表示把数组的每一项调用函数后再拼成新的数组
+											#str(变量)函数是把变量转成字符串类型
+		"$%s$" % tl.hn(args['n']),
+		"$%s$" % tl.hn(args['q']),
+		"$%s$" % tl.hn(datum['score'])
+	]
+	ret.append(row)	#这是python数组的push_back
+return merge_ver(ret)	#这个函数可以把竖直方向上相同的格子合并
